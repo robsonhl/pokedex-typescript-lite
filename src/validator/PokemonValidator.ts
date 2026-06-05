@@ -5,26 +5,6 @@ export class PokemonValidator {
     if (!this.isObject(value)) {
       throw new Error("Type error");
     }
-    // const requiredFields = [
-    //   "id",
-    //   "name",
-    //   "types",
-    //   "moves",
-    //   "height",
-    //   "weight",
-    //   "hpBase",
-    //   "speed",
-    //   "atkPhysical",
-    //   "atkSpecial",
-    //   "defPhysical",
-    //   "defSpecial",
-    // ];
-    // for (const field of requiredFields) {
-    //   if (!(field in value)) {
-    //     throw new Error(`Missing required field: ${field}`);
-    //   }
-    // }
-
     if (!this.isNumber(value.id)) {
       throw new Error("id must be a number");
     }
