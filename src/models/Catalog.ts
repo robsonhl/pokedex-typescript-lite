@@ -28,15 +28,21 @@ export class PokemonCatalog {
     });
   }
 
-  remove(id: number): void {
-    const exists = this.pokemons.some((pokemon) => pokemon.id === id);
+  remove(pokemon: number | string): void {
+    const exists = this.pokemons.some(
+      (poke) => poke.id === pokemon || poke.name === pokemon,
+    );
 
     if (!exists) {
       console.log("[AVISO] Nenhum Pokémon encontrado com esse ID.");
       return;
     }
-
-    this.pokemons = this.pokemons.filter((pokemon) => pokemon.id !== id);
+    if (typeof pokemon === "number") {
+      this.pokemons = this.pokemons.filter((poke) => poke.id !== pokemon);
+    }
+    if (typeof pokemon === "string") {
+      this.pokemons = this.pokemons.filter((poke) => poke.name !== pokemon);
+    }
     console.log("[OK] Pokémon removido do catálogo.");
   }
 }
