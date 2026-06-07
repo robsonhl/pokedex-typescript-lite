@@ -23,7 +23,7 @@ export class PokemonCatalog {
 
     this.pokemons.forEach((pokemon) => {
       console.log(
-        `#${String(pokemon.id)} - ${pokemon.name} | Tipos: ${pokemon.types.join(", ")}`,
+        `#${String(pokemon.id)} - ${pokemon.name} | Tipos: ${pokemon.types.map((item) => item.type.name).join(", ")}`,
       );
     });
   }
