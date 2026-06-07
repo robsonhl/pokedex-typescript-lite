@@ -4,6 +4,7 @@ Uma aplicação CLI minimalista de Pokédex desenvolvida em **TypeScript** que i
 
 > Miniprojeto sugerido pelo curso **SCTEC Dev Backend Node.js**
 
+# Link do KANBAN no Trello https://trello.com/invite/b/6a19af27892922e9baaed15c/ATTI801199e14add3a57160f9392dec4f4b6C4FD7CAA/pokedex-typescript-lite
 ---
 
 ## 📋 Tabela de Conteúdo
